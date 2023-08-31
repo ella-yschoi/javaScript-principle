@@ -4,5 +4,5 @@
 
 <br/>
 
-- [JavaScript](/01_JavaScript.md)
-- [Variable](/02_Variable.md)
+- [JavaScript](/Principles/01_JavaScript.md)
+- [Variable](/Principles/02_Variable.md)
