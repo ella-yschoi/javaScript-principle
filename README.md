@@ -1,7 +1,8 @@
 # JavaScript-Principle
 
-> 🤔 JavaScript에 Why를 던지기
+> 🤔 JavaScript에 끊임없는 Why를 던지기
 
 <br/>
 
-## What is JavaScript?
+- [JavaScript](/01_JavaScript.md)
+- [Variable](/02_Variable.md)
