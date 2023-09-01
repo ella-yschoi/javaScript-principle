@@ -6,3 +6,4 @@
 
 - [JavaScript](/Principles/01_JavaScript.md)
 - [Variable](/Principles/02_Variable.md)
+- [Operators](/Principles/03_Operators.md)
