@@ -183,7 +183,7 @@ console.log(result); // 14
 
 <br/>
 
-## 8 동등 비교 연산자 (Equality Operators)
+## 8. 동등 비교 연산자 (Equality Operators)
 
 - `==` 값이 같음
 - `!=` 값이 다름
