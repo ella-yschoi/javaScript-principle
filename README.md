@@ -4,6 +4,7 @@
 
 <br/>
 
-- [JavaScript](/Principles/01_JavaScript.md)
-- [Variable](/Principles/02_Variable.md)
-- [Operators](/Principles/03_Operators.md)
+- [자바스크립트 (JavaScript)](/Principles/01_JavaScript.md)
+- [변수 (Variable)](/Principles/02_Variable.md)
+- [연산자 (Operators)](/Principles/03_Operators.md)
+- [제어문 (Control Flow Statement)](/Principles/04_Control_Flow_Statement.md)
