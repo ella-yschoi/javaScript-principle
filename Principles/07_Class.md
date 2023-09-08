@@ -323,17 +323,19 @@ class Employee {
 class FullTimeEmployee extends Employee {
   // (1) 각각의 클래스 안에서 시간당 얼마를 받는지 알아야 하므로 & 정해져 있으므로
   // 각각의 인스턴스에서 결정하는 게 아니라, 클래스를 만들 때 얼마 받는지를 결정
-  static PAY_RATE = 10000; // 숫자를 그냥 적기보다, 이같이 상수변수를 활용해 의미부여
+  static #PAY_RATE = 10000;
   constructor(name, department, hoursPerMonth) {
     // Employee에 있는 생성자 불러오고 + 내부적으로 결정한 rate
-    super(name, department, hoursPerMonth, FullTimeEmployee.PAY_RATE);
+    super(name, department, hoursPerMonth, FullTimeEmployee.#PAY_RATE);
   }
 }
 
 class PartTimeEmployee extends Employee {
-  static PAY_RATE = 8000;
+  // 숫자를 그냥 적기보다, 이같이 상수변수를 활용해 의미부여 & 클래스 내부에서만 사용되어 외부에서 참조할 필요도 없고
+  // 다른 값으로 변경되면 안되므로 static private으로 캡슐화
+  static #PAY_RATE = 8000;
   constructor(name, department, hoursPerMonth) {
-    super(name, department, hoursPerMonth, PartTimeEmployee.PAY_RATE);
+    super(name, department, hoursPerMonth, PartTimeEmployee.#PAY_RATE);
   }
 }
 
