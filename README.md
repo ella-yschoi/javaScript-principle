@@ -14,3 +14,4 @@
 - [빌트인객체 (Built-in Objects)](/Principles/08_Built_in_Objects.md)
 - [배열 (Array)](/Principles/09_Array.md)
 - [고차함수 (Higher Order Function)](/Principles/10_Higher_Order_Function.md)
+- [이터레이터 (Iterator)](/Principles/11_Iterator.md)
