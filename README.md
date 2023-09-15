@@ -15,3 +15,5 @@
 - [배열 (Array)](/Principles/09_Array.md)
 - [고차함수 (Higher Order Function)](/Principles/10_Higher_Order_Function.md)
 - [이터레이터 (Iterator)](/Principles/11_Iterator.md)
+- [전개구문 (Spread Syntax)](/Principles/13_Spread_Syntax.md)
+- [구조분해할당 (Desturcturing Assignment)](/Principles/14_Desturcturing_Assignment.md)
