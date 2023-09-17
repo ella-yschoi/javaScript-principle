@@ -155,11 +155,12 @@ class Student {
 const student = new Student('연수', '최');
 student.firstName = '엘라';
 
-// get 쓰기 전
+// get을 쓰지 않으면
 console.log(student.firstName); 
 console.log(student.fullName());
 // 행동이라기 보다, 단순히 객체의 상태. 즉, 단지 이름이라는 상태를 함수를 호출하듯이 쓰는게 어색함
 
+// get을 쓰면
 console.log(student.firstName); // 엘라
 console.log(student.fullName); // 최 엘라 → get 호출
 
