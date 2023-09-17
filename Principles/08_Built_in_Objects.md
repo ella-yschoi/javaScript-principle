@@ -90,16 +90,16 @@ console.log(isTrue.valueOf());
 - null
 - NaN
 - undefined
-- ''
+- ' ' (빈 문자열)
 
 ### (3) Truthy
 
 - 1
 - -1
 - '0'
-- 'false': 주의⚠️
+- 'false' (주의⚠️ 문자열임)
 - []
-- {}: object 자체가 값
+- {} (object 자체가 값)
 
 <br/>
 
