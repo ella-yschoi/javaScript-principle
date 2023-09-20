@@ -18,4 +18,4 @@
 - [전개구문 (Spread Syntax)](/Principles/13_Spread_Syntax.md)
 - [구조분해할당 (Desturcturing Assignment)](/Principles/14_Desturcturing_Assignment.md)
 - [자료구조 (Set, Map, Symbol)](/Principles/15_Data_Structure.md)
-- [유용한 연산자들 (Operators more)](/Principles/16_Operators(more).md)
+- [유용한 연산자들 (Operators more)](/Principles/16_Operators-more.md)
