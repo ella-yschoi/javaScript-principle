@@ -79,9 +79,12 @@ try {
 
 ## 3. Promise
 
-### (1)
+### (1) promise란?
 
-### (2)
+- 무겁고 오래 걸리는 일이 있다면 코드 내부에서 비동기적으로 처리할 수 있게 도와줌
+- '일이 끝나면 알려줄게, 약속해줄게!'
+
+### (2) 용례
 
 ```javascript
 function runInDelay(seconds) {
@@ -94,9 +97,9 @@ function runInDelay(seconds) {
 }
 
 runInDelay(2)
-  .then(() => console.log('타이머 완료'))
-  .catch(console.error)
-  .finally(() => console.log('끝남'));
+  .then(() => console.log('타이머 완료')) // 필요한 일을 수행
+  .catch(console.error) // 에러를 처리
+  .finally(() => console.log('끝남')); // 최종적으로 무조건 호출
 ```
 
 <br/>
