@@ -40,11 +40,11 @@ arr = [...fruits1, '🍓', ...fruits2];
 console.log(arr); // ['🍏', '🥝', '🍓', '🍓', '🍌']
 
 // Object
-const ella = { name: 'ella', age: 20, home: { address: 'home' } };
+const ella = { name: 'Ella', age: 20, home: { address: 'home' } };
 const updated = {
   ...ella, // ella를 쫙 펼쳐서 name과 age를 넣음
   job: 'FE developer',
 };
-console.log(ella);
-console.log(updated);
+console.log(ella); // {name: 'Ella', age: 20, home: {address: 'home'}}
+console.log(updated); // {name: 'Ella', age: 20, home: {address: 'home'}, job: 'FE developer'}
 ```
