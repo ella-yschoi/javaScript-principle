@@ -24,3 +24,6 @@
 - [모듈 (Module)](/Principles/19_Module.md)
 - [비동기 (Async)](/Principles/20_Async.md)
 - [비동기 (Fetch)](/Principles/21_Fetch.html)
+- [스코프 (Scope)](/Principles/22_Scope.md)
+- [호이스팅 (Hoisting)](/Principles/23_Hoisting.md)
+- [프로토타입 (Prototype)](/Principles/24_Prototype.md)
