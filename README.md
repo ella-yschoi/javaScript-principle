@@ -27,3 +27,4 @@
 - [스코프 (Scope)](/Principles/22_Scope.md)
 - [호이스팅 (Hoisting)](/Principles/23_Hoisting.md)
 - [프로토타입 (Prototype)](/Principles/24_Prototype.md)
+- [클로저 (Closure)](/Principles/25_Closure.md)
