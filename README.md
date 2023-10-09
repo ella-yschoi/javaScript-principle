@@ -29,3 +29,4 @@
 - [호이스팅 (Hoisting)](/Principles/23_Hoisting.md)
 - [프로토타입 (Prototype)](/Principles/24_Prototype.md)
 - [클로저 (Closure)](/Principles/25_Closure.md)
+- [함수 심화 (This, Arrow)](/Principles/26_This.md)
