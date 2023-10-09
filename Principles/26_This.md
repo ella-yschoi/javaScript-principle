@@ -58,11 +58,11 @@ cat2.printName();
 
 <br/>
 
-## 2. Binding
+## 2. 동적 Binding
 
-### (1) This 바인딩
+### (1) 동적 Binding 이란?
 
-- 자바, C#, C++ 대부분의 객체지향 프로그래밍 언어에서는 this는 항상 자신의 인스턴스 자체를 가리킴 즉, 정적으로 인스턴스가 만들어지는 시점에 this가 결정됨.
+- 자바, C#, C++ 대부분의 객체지향 프로그래밍 언어에서는 this는 항상 자신의 인스턴스 자체를 가리킴 즉, 정적으로 인스턴스가 만들어지는 시점에 this가 결정되어 변경될 수 없음
 - 하지만 자바스크립트에서는 누가 호출하냐에 따라서 this가 달라짐. 즉, this는 호출하는 사람(caller)에 의해 동적으로 결정됨.
 
 ### (2) 용례
@@ -82,6 +82,7 @@ function Dog(name) {
   };
 }
 
+// this가 caller에 의해 동적으로 결정됨
 const cat = new Cat('냐옹');
 const dog = new Dog('멍멍');
 cat.printName();
@@ -101,17 +102,18 @@ printOnMonitor(cat.printName);
 
 <br/>
 
-## 3. Binding 응용
+## 3. 정적 Binding
 
 ```javascript
 function Cat(name) {
   this.name = name;
-  // 2. arrow 함수를 사용: arrow 함수는 렉시컬 환경에서의 this를 기억함
+  // 1. arrow 함수를 사용: arrow 함수는 동적이 아닌, 렉시컬 환경에서의 this를 기억함
   // 화살표 함수 밖에서 제일 근접한 스코프의 this를 가리킴
+  // 하단의 bind 함수보다 더 간편한 방법
   this.printName = () => {
     console.log(`고양이 이름: ${this.name}`);
   };
-  // 1. bind 함수를 이용해서 수동적으로 바인딩 해주기
+  // 2. bind 함수를 이용해서 수동적으로 바인딩 해주기
   // this.printName = this.printName.bind(this);
 }
 
@@ -145,7 +147,8 @@ printOnMonitor(cat.printName);
 
 ### (1) 화살표 함수란
 
-- 함수처럼 사용, 생성자 함수로 사용 (클래스)
+- 함수처럼 사용 가능
+- 생성자 함수로 사용 (클래스 대체)
 - 하지만, 이걸 위해서 불필요한 무거운 프로토타입(많은 데이터를 담고 있는 객체) 생성됨
 
 ### (2) 화살표 함수 특징
@@ -153,33 +156,33 @@ printOnMonitor(cat.printName);
 - 문법이 깔끔함
 - 생성자 함수로 사용이 불가능 (무거운 프로토타입을 만들지 않음)
 - 함수 자체 arguments
-- this에 대한 바인딩이 정적으로 결정됨
-- 함수에서 제일 근접한 상위 스코프의 this에 정적으로 바인딩됨
+- this에 대한 바인딩이 정적으로 결정됨: **함수에서 제일 근접한 상위 스코프의 this에 정적으로 바인딩됨**
 
 ### (3) 용례
 
 ```javascript
 const dog = {
   name: 'Dog',
-  play: function () {
-    // 💩
+  // 객체 안에서 함수를 선언하는 것은 좋지 않음
+  play: function () { 
     console.log('논다');
   },
 };
 dog.play();
-const obj = new dog.play(); // 좋지 않음
+const obj = new dog.play(); // 일반 생성자 함수처럼 사용할 수 있으나, 좋지 않음
 console.log(obj);
 
-// ES6
+// ES6에서 나온 메소드 사용
 const cat = {
   name: 'cat',
+  // 객체 안에서 함수 메소드로 정의: 객체의 메소드 (오브젝트에 속한 함수)
   play() {
-    // 객체의 메서드 (오브젝트에 속한 함수)
     console.log('냐옹');
   },
 };
 cat.play();
-// const obj1 = new cat.play(); // 생성자 함수로 사용 ❌
+// 생성자 함수로 사용 불가
+// const obj1 = new cat.play();
 
 function sum(a, b) {
   console.log(arguments);
