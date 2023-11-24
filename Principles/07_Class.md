@@ -86,7 +86,7 @@ const banana = Fruit.makeRandomFruit();
 console.log(banana); // Fruit {name: 'banana', emoji: '🍌', display: ƒ}
 console.log(Fruit.MAX_FRUITS); // 4
 
-// static 예시: object 굳이 만들지 않아도 됨
+// static 사용 예시: object 굳이 만들지 않아도 됨
 Math.pow();
 Number.isFinite(1);
 ```
@@ -95,19 +95,21 @@ Number.isFinite(1);
 
 ## 3. 필드
 
-### (1) 접근제어자 (캡슐화)
+### (1) 접근 제어자 (캡슐화)
 
 - 한번 만들어진 다음에 외부에서 변경이 불가능하도록 만들고 싶을 때 사용
-- 즉, **클래스 내부상으로 필요한 데이터를 외부에서 보이지 않도록 숨겨놓는 것**
-- private(#), public(디폴트 상태), protected
+- 즉, **클래스 내부 상으로 필요한 데이터를 외부에서 보이지 않도록 숨겨놓는 것**
+- private(#), public(자바스크립트 기본 상태), protected
 
 ### (2) 용례
 
 ```javascript
 class Fruit {
+  // 생성자 안에 써주면 딱히 안써도 되긴 함
   #name;
   #emoji;
-  #type = '과일'; // 과일로 미리 초기화됨
+  #type = '과일'; // 과일로 미리 초기화 시킴
+
   constructor(name, emoji) {
     this.#name = name;
     this.#emoji = emoji;
@@ -119,7 +121,7 @@ class Fruit {
 }
 
 const apple = new Fruit('apple', '🍎');
-//apple.#name = '오렌지'; // 한번 지정해주면 #field는 외부에서 접근이 불가능
+//apple.#name = '오렌지'; → 한번 지정해 주면 #field는 외부에서 접근이 불가능
 console.log(apple); // Fruit {#name: 'apple', #emoji: '🍎', #type: '과일', #display: ƒ}
 ```
 
@@ -243,7 +245,7 @@ class Dog extends Animal {
     console.log('재밌게 노는 멍멍'); // 재밌게 노는 멍멍 → 아래에서 play 호출해서 출력됨
   }
 
-  // 오버라이딩(overriding): 부모의 행동을 내 행동으로 덮어씌우기
+  // 오버라이딩(overriding): 부모의 행동을 자식 행동으로 덮어씌우기
   eat() {
     // 부모의 행동을 유지하면서 추가로 무언가를 만든다
     super.eat(); // 먹는다
